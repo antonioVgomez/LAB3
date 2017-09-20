@@ -1,0 +1,43 @@
+body {
+    background-image: url("../background/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 2.5em;
+    /*color: silver;*/
+}
+
+#main {
+    /*text-align: center;*/
+}
+
+footer {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold !important;
+    /*color:silver;*/
+}
+
+#p1 {
+    margin:20px;
+    padding-left: 20%;
+}
+
+#p2 {
+    margin:20px;
+    padding-left: 20%;
+}
+
+#p3 {
+    margin:20px;
+    padding-left: 20%;
+}
+
+#p4 {
+    margin:20px;
+    padding-left: 20%;
+}
