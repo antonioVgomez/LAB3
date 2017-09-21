@@ -1,0 +1,96 @@
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'profilePicUrl' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 112
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'cards' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 117
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'cards' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 118
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'imgURL' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 123
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'cards' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 117
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'cards' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 126
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 136
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:126
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'cards' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 127
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 136
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:127
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'totalPoints' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 127
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:06:40 UTC] PHP Warning:  Illegal string offset 'totalPoints' in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 128
+[20-Sep-2017 10:06:40 UTC] PHP Stack trace:
+[20-Sep-2017 10:06:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:06:40 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:07:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 136
+[20-Sep-2017 10:07:44 UTC] PHP Stack trace:
+[20-Sep-2017 10:07:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:07:44 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:07:44 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:126
+[20-Sep-2017 10:07:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 136
+[20-Sep-2017 10:07:44 UTC] PHP Stack trace:
+[20-Sep-2017 10:07:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[20-Sep-2017 10:07:44 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:143
+[20-Sep-2017 10:07:44 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:127
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:173
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:155
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:173
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:156
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:174
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:155
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:174
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:156
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:175
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:155
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:175
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:156
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:176
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:155
+[21-Sep-2017 00:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/LAB3/silverjack/index.php on line 166
+[21-Sep-2017 00:17:00 UTC] PHP Stack trace:
+[21-Sep-2017 00:17:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:0
+[21-Sep-2017 00:17:00 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:176
+[21-Sep-2017 00:17:00 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/LAB3/silverjack/index.php:156
