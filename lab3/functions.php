@@ -139,12 +139,7 @@
             }
             
             
-            $randoms = array();
-            for ($i = 1; $i<5;$i++) {
-                
-                array_push($randoms,$person[$i]);
-                shuffle($randoms);
-            }
+           
             
             // displayPerson($randoms);
             
