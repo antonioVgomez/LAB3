@@ -1,0 +1,16 @@
+[21-Sep-2017 03:59:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/LAB3/silverjack/index.php on line 137
+[21-Sep-2017 03:59:26 UTC] PHP Stack trace:
+[21-Sep-2017 03:59:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/LAB3/silverjack/index.php:0
+[21-Sep-2017 03:59:26 UTC] PHP   2. displayPerson($person = *uninitialized*) /home/ubuntu/workspace/LAB3/silverjack/index.php:144
+[21-Sep-2017 03:59:26 UTC] PHP   3. calculateHandValue($cards = *uninitialized*) /home/ubuntu/workspace/LAB3/silverjack/index.php:130
+[21-Sep-2017 03:59:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/LAB3/silverjack/index.php on line 137
+[21-Sep-2017 03:59:27 UTC] PHP Stack trace:
+[21-Sep-2017 03:59:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/LAB3/silverjack/index.php:0
+[21-Sep-2017 03:59:27 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/LAB3/silverjack/index.php:144
+[21-Sep-2017 03:59:27 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/LAB3/silverjack/index.php:130
+[21-Sep-2017 04:04:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/LAB3/silverjack/index.php on line 133
+[21-Sep-2017 04:04:42 UTC] PHP Stack trace:
+[21-Sep-2017 04:04:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/LAB3/silverjack/index.php:0
+[21-Sep-2017 04:04:42 UTC] PHP   2. displayPerson($person = *uninitialized*) /home/ubuntu/workspace/LAB3/silverjack/index.php:140
+[21-Sep-2017 04:04:42 UTC] PHP   3. calculateHandValue($cards = *uninitialized*) /home/ubuntu/workspace/LAB3/silverjack/index.php:126
+[21-Sep-2017 04:11:22 UTC] PHP Parse error:  syntax error, unexpected '$person' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/LAB3/silverjack/index.php on line 114
