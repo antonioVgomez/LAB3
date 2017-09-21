@@ -128,7 +128,7 @@
                 for($i = 0; $i < count($person["cards"]); $i++) {
                     $card = $person["cards"][$i];
                     
-                    
+                    // shuffle($card);
                     // construct the imgURL for each card
                     
                     // translate this to HTML 
@@ -137,11 +137,5 @@
                 
                 echo calculateHandValue($person["cards"]); 
             }
-            
-            
-           
-            
-            // displayPerson($randoms);
-            
         
         ?>

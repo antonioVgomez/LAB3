@@ -12,6 +12,7 @@
     </head>
     <body>
         <h1>Silver Jack</h1>
+        <hr>
         <div id="main">
             <?php 
             
