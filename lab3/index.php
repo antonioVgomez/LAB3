@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <link rel="icon" href="favicon/favicon.ico" type="image/png">
         <title>
             Silver Jack
         </title>
