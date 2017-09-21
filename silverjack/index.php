@@ -90,21 +90,11 @@
         }
         
         $deck = generateDeck(); 
-        //printDeck($deck); 
-        
         
         
         // function that generates a "hand" of cards for one person (no duplicates)
         
-        
-            
-        /*$person = array(
-            "name" => array ("Abraham", "player2", "player3", "player4"), 
-            "profilePicUrl" => "./profile_pics/abraham.png", 
-            "cards" => generateHand($deck),
-            "totalPoints" => array (0, 0, 0, 0)
-            ); */
-            
+        //add the totalPoints to these Jason    
         $person1 = array(
             "name" => "William", 
             "profilePicUrl" => "./profile_pics/will.png", 
@@ -134,10 +124,9 @@
             ); 
                 
             
-            
+        //edited by Jason
         function displayPerson($person) {
             // show profile pic
-            //global $person;
             echo "<img src='".$person["profilePicUrl"]."'>"; 
                 
                 
@@ -155,8 +144,6 @@
             echo calculateHandValue($person["cards"]); 
             $person["totalPoints"] = calculateHandValue($person["cards"]);
             $test = $person["totalPoints"];
-            //echo "First test = $test <br>";
-            //test V
             echo "<br>";
             return $test;
             
@@ -169,26 +156,21 @@
             foreach ($cards as $card) {
                 $sum += $card["num"]; 
             }
-            //$person["totalPoints"] = $sum;
+            
             return $sum; 
         }
-            
+        
+        //add this Jason
         $person1["totalPoints"] = displayPerson($person1); 
         $person2["totalPoints"] = displayPerson($person2);
         $person3["totalPoints"] = displayPerson($person3);
         $person4["totalPoints"] = displayPerson($person4);
         
-        $testingValue = $person1["totalPoints"];
-        
-        //echo "another test   ->($testingValue)";
-            
-        //$playersArray = array ($person1, $person2, $person3, $person4);
-            
+        //add this Jason
         function determineWinner($player1, $player2, $player3, $player4) {
             //For error testing
             $winner = "NULL";
             $highestSum = 0;
-            $player2["totalPoints"] = 40;
             
             //iterate through players
             for($i = 1; $i <= 4; $i++) {
@@ -202,6 +184,7 @@
             echo "The winner is $winner";
         }
             
+        //add this Jason
         determineWinner($person1, $person2, $person3, $person4);
         ?>
     </body>
