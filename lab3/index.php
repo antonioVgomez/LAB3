@@ -12,10 +12,10 @@
     </head>
     <body>
         <h1>Silver Jack</h1>
-        <hr>
+        <hr id="sj">
         <div id="main">
             <?php 
-            
+                
                 echo "<div id='p1'>";  
                         displayPerson($person1);
                 echo "</div>";
@@ -35,7 +35,7 @@
             ?>
         </div>
         
-        <hr>
+        <hr id="ft">
         <footer>
             CST336 2017&copy; Hutt, Solomon, Kirn, Villagomez
         </footer>

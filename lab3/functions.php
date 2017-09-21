@@ -70,9 +70,12 @@
             
             for ($i = 0; $i < 3; $i++) {
                 $cardNum = array_pop($deck);
+                // shuffle($cardNum);
                 $card = mapNumberToCard($cardNum); 
+                // shuffle($card);
                 array_push($hand, $card); 
             }
+            shuffle($hand);
             return $hand; 
         }
         
@@ -137,5 +140,20 @@
                 
                 echo calculateHandValue($person["cards"]); 
             }
-        
+            
+            
+            
+            //messing around
+            $random = array($person1, $person2, $person3, $person4);
+            
+            function randomizing() {
+                for($i=0;$i<count($random);$i++) {
+                    shuffle($random);
+                    array_pop($random);
+                }
+                return $random;
+            }
+            
+            $randoms = randomizing();
+        // end of messing
         ?>
