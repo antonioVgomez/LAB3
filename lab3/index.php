@@ -17,6 +17,7 @@
             <?php 
                 
                 echo "<div id='p1'>";  
+                        // displayPerson($people);
                         displayPerson($person1);
                 echo "</div>";
                 
@@ -31,7 +32,10 @@
                 echo "<div id='p4'>";  
                         displayPerson($person4);
                 echo "</div>";
-                // play(); 
+                
+                echo "<div id='win'>";
+                determineWinner($person1, $person2, $person3, $person4);
+                echo "</div>";
             ?>
         </div>
         

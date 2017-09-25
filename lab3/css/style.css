@@ -59,3 +59,10 @@ footer {
     margin-top: 0px;
     margin-bottom: 15px;
 }
+
+#win {
+    color: red;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}

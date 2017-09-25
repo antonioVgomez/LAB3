@@ -1,13 +1,28 @@
-<?php 
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        <?php 
         
         // Generate a deck of cards 
         // [0, 1, 2, ..., 51]
         // map each number to a card 
         
         // generate a "hand" of cards
-    // function play() {
         
-        //numbers to cards
+         /*TODO:
+            done:Get his version working
+            Decide when to stop getting points for a player before passing 42
+            Display winner
+            Display same 4 players in random order
+            Create css file with at least 10 rules
+            Make code look pretty
+            */
+        
+        
         function mapNumberToCard($num) {
             $cardValue = ($num % 13) + 1; 
             $cardSuit = floor($num / 13); 
@@ -27,7 +42,6 @@
                     $suitStr = "spades"; 
                     break; 
             }
-
             $card = array(
                 'num' => $cardValue, 
                 'suit' => $cardSuit, 
@@ -38,7 +52,6 @@
         }
         
         
-        //shuffles deck
         function generateDeck() {
             $cards = array(); 
         
@@ -53,7 +66,6 @@
  
         }
         
-        $deck = generateDeck(); 
         
         function printDeck($deck) {
             for ($i = 0; $i < count($deck); $i++) {
@@ -63,7 +75,7 @@
             }
         }
         
-        
+        //edited this function to make random hands for each player
         // Return a specific number of cards
         function generateHand(&$deck) {
             $hand = array(); 
@@ -79,19 +91,12 @@
             return $hand; 
         }
         
-        
-        //adds hand value
-        function calculateHandValue($cards) {
-                $sum = 0; 
-                
-                foreach ($cards as $card) {
-                    $sum += $card["num"]; 
-                }
-                
-                return $sum; 
-            }
+        $deck = generateDeck(); 
         
         
+        // function that generates a "hand" of cards for one person (no duplicates)
+        
+        //add the totalPoints to these Jason    
         $person1 = array(
             "name" => "William", 
             "profilePicUrl" => "./profile_pics/will.png", 
@@ -99,6 +104,8 @@
             "totalPoints" => 0
             ); 
                 
+        
+        
         $person2 = array(
             "name" => "Jason", 
             "profilePicUrl" => "./profile_pics/jason.png", 
@@ -119,53 +126,60 @@
             "cards" => generateHand($deck),
             "totalPoints" => 0
             ); 
+                
             
-            
-            
-            
-            
-            // displays person and cards
-            function displayPerson($person) {
-                // show profile pic
-                echo "<img src='".$person["profilePicUrl"]."'>"; 
+        //edited by Jason, edited again 9/25/17
+        function displayPerson(&$person) {
+            // show profile pic
+            echo "<img src='".$person["profilePicUrl"]."'>"; 
                 
                 
-                // iterate through $person's "cards"
+            // iterate through $person's "cards"
                 
-                for($i = 0; $i < count($person["cards"]); $i++) {
-                    $card = $person["cards"][$i];
+            for($i = 0; $i < count($person["cards"]); $i++) {
+                $card = $person["cards"][$i];
                     
-                    // construct the imgURL for each card
-                    
-                    // translate this to HTML 
-                    echo "<img src='".$card["imgURL"]."'>"; 
-                }
+                // construct the imgURL for each card
                 
-                echo calculateHandValue($person["cards"]); 
+                // translate this to HTML 
+                echo "<img src='".$card["imgURL"]."'>"; 
+            }
                 
-                $person["totalPoints"] = calculateHandValue($person["cards"]);
-                echo "<br>";
+            echo calculateHandValue($person["cards"]); 
+            $person["totalPoints"] = calculateHandValue($person["cards"]);
+            echo "<br>";
+            
+        }
+            
+            
+        function calculateHandValue($cards) {
+            $sum = 0; 
+                
+            foreach ($cards as $card) {
+                $sum += $card["num"]; 
             }
             
-            function determineWinner($player1, $player2, $player3, $player4) {
-                //For error testing
-                $winner = 0;
-                $highestSum = 0;
-                
-                //iterate through players
-                for($i = 1; $i <= 4; $i++) {
-                    //compare current player's score to the highest sum, while not being greater than 42.
-                    if ((${'player'.$i}["totalPoints"] > $highestSum) && (${'player'.$i}["totalPoints"] < 42)) {
-                        $highestSum = ${'player'.$i}["totalPoints"];
-                        $winner = ${'player'.$i}["name"];
-                    }
-                }
-                    
-                echo "The winner is $winner";
-            }
-            
+            return $sum; 
+        }
+        
         //add this Jason
-        determineWinner($person1, $person2, $person3, $person4);
+        function determineWinner($player1, $player2, $player3, $player4) {
+            //For error testing
+            $winner = "NULL";
+            $highestSum = 0;
             
-            
+            //iterate through players
+            for($i = 1; $i <= 4; $i++) {
+                //compare current player's score to the highest sum, while not being greater than 42.
+                if ((${'player'.$i}["totalPoints"] > $highestSum) && (${'player'.$i}["totalPoints"] < 42)) {
+                    $highestSum = ${'player'.$i}["totalPoints"];
+                    $winner = ${'player'.$i}["name"];
+                }
+            }
+                
+            echo "The winner is $winner";
+        }
+
         ?>
+    </body>
+</html>
