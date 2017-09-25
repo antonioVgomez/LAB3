@@ -65,17 +65,17 @@
         
         
         // Return a specific number of cards
-        function generateHand($deck) {
+        function generateHand(&$deck) {
             $hand = array(); 
             
             for ($i = 0; $i < 3; $i++) {
                 $cardNum = array_pop($deck);
-                // shuffle($cardNum);
                 $card = mapNumberToCard($cardNum); 
-                // shuffle($card);
                 array_push($hand, $card); 
             }
-            shuffle($hand);
+            
+            shuffle($deck);
+            
             return $hand; 
         }
         
@@ -95,25 +95,29 @@
         $person1 = array(
             "name" => "William", 
             "profilePicUrl" => "./profile_pics/will.png", 
-            "cards" => generateHand($deck)
+            "cards" => generateHand($deck),
+            "totalPoints" => 0
             ); 
                 
         $person2 = array(
             "name" => "Jason", 
             "profilePicUrl" => "./profile_pics/jason.png", 
-            "cards" => generateHand($deck)
+            "cards" => generateHand($deck),
+            "totalPoints" => 0
             ); 
             
         $person3 = array(
             "name" => "Antonio", 
             "profilePicUrl" => "./profile_pics/antonio.png", 
-            "cards" => generateHand($deck)
+            "cards" => generateHand($deck),
+            "totalPoints" => 0
             );
             
         $person4 = array(
             "name" => "Kye", 
             "profilePicUrl" => "./profile_pics/Kye.png", 
-            "cards" => generateHand($deck)
+            "cards" => generateHand($deck),
+            "totalPoints" => 0
             ); 
             
             
@@ -131,7 +135,6 @@
                 for($i = 0; $i < count($person["cards"]); $i++) {
                     $card = $person["cards"][$i];
                     
-                    // shuffle($card);
                     // construct the imgURL for each card
                     
                     // translate this to HTML 
@@ -139,21 +142,30 @@
                 }
                 
                 echo calculateHandValue($person["cards"]); 
+                
+                $person["totalPoints"] = calculateHandValue($person["cards"]);
+                echo "<br>";
             }
             
-            
-            
-            //messing around
-            $random = array($person1, $person2, $person3, $person4);
-            
-            function randomizing() {
-                for($i=0;$i<count($random);$i++) {
-                    shuffle($random);
-                    array_pop($random);
+            function determineWinner($player1, $player2, $player3, $player4) {
+                //For error testing
+                $winner = 0;
+                $highestSum = 0;
+                
+                //iterate through players
+                for($i = 1; $i <= 4; $i++) {
+                    //compare current player's score to the highest sum, while not being greater than 42.
+                    if ((${'player'.$i}["totalPoints"] > $highestSum) && (${'player'.$i}["totalPoints"] < 42)) {
+                        $highestSum = ${'player'.$i}["totalPoints"];
+                        $winner = ${'player'.$i}["name"];
+                    }
                 }
-                return $random;
+                    
+                echo "The winner is $winner";
             }
             
-            $randoms = randomizing();
-        // end of messing
+        //add this Jason
+        determineWinner($person1, $person2, $person3, $person4);
+            
+            
         ?>
