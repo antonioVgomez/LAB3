@@ -76,8 +76,9 @@
             }
         }
         
+        //edited this function to make random hands for each player
         // Return a specific number of cards
-        function generateHand($deck) {
+        function generateHand(&$deck) {
             $hand = array(); 
             
             for ($i = 0; $i < 3; $i++) {
@@ -85,6 +86,8 @@
                 $card = mapNumberToCard($cardNum); 
                 array_push($hand, $card); 
             }
+            
+            shuffle($deck);
             
             return $hand; 
         }
@@ -102,6 +105,8 @@
             "totalPoints" => 0
             ); 
                 
+        
+        
         $person2 = array(
             "name" => "Jason", 
             "profilePicUrl" => "./profile_pics/jason.png", 
