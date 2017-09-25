@@ -129,8 +129,8 @@
             ); 
                 
             
-        //edited by Jason
-        function displayPerson($person) {
+        //edited by Jason, edited again 9/25/17
+        function displayPerson(&$person) {
             // show profile pic
             echo "<img src='".$person["profilePicUrl"]."'>"; 
                 
@@ -148,9 +148,7 @@
                 
             echo calculateHandValue($person["cards"]); 
             $person["totalPoints"] = calculateHandValue($person["cards"]);
-            $test = $person["totalPoints"];
             echo "<br>";
-            return $test;
             
         }
             
@@ -165,11 +163,12 @@
             return $sum; 
         }
         
+        //edited this Jason
         //add this Jason
-        $person1["totalPoints"] = displayPerson($person1); 
-        $person2["totalPoints"] = displayPerson($person2);
-        $person3["totalPoints"] = displayPerson($person3);
-        $person4["totalPoints"] = displayPerson($person4);
+        displayPerson($person1); 
+        displayPerson($person2);
+        displayPerson($person3);
+        displayPerson($person4);
         
         //add this Jason
         function determineWinner($player1, $player2, $player3, $player4) {
