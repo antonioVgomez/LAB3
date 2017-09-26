@@ -154,8 +154,8 @@
             //For error testing
             $winner = "NULL";
             $highestSum = 0;
-            $winningTotal = 0;
-
+            $overallTotal = 0;
+    
             //iterate through players
             for($i = 0; $i < count($player); $i++) {
                 
@@ -166,9 +166,10 @@
                 }
                 
                 if($player[$i]["totalPoints"] <= 42) {
-                    $winningTotal+= $player[$i]["totalPoints"];
+                    $overallTotal+= $player[$i]["totalPoints"];
                 }
             }
+            $winningTotal = $overallTotal - $highestSum;
                 
             echo "The winner is $winner with $winningTotal points!";
         }
