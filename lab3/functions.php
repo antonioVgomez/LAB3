@@ -122,7 +122,7 @@
                 echo "<img src='".$people[$i]["profilePicUrl"]."'>";
                 echo "<br>";
                 
-                for($j = 0; $j <= count($people[$i]["cards"]); $j++) {
+                for($j = 0; $j < count($people[$i]["cards"]); $j++) {
                 $card = $people[$i]["cards"][$j];
                     
                 // construct the imgURL for each card
@@ -171,7 +171,7 @@
             }
             $winningTotal = $overallTotal - $highestSum;
                 
-            echo "The winner is $winner with $winningTotal points!";
+            echo "The winner is <span>$winner</span> with <span>$winningTotal</span> points!";
         }
 
 ?>

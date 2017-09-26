@@ -11,31 +11,17 @@
         ?>
     </head>
     <body>
-        <h1>Silver Jack</h1>
+        <h1 id="title">Silver Jack</h1>
         <hr id="sj">
         <div id="main">
             <?php 
                 
                 echo "<div id='p1'>";  
-                        // displayPerson($person1);
                         randomPeople();
                 echo "</div>";
                 
-                // echo "<div id='p2'>";  
-                //         // displayPerson($person2);
-                // echo "</div>";
-                
-                // echo "<div id='p3'>";  
-                //         // displayPerson($person3);
-                // echo "</div>";
-                
-                // echo "<div id='p4'>";  
-                //         // displayPerson($person4);
-                // echo "</div>";
-                
                 echo "<div id='win'>";
                 determineWinner($people);
-                // determineWinner($person1, $person2, $person3, $person4);
                 echo "</div>";
             ?>
         </div>
