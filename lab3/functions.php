@@ -105,41 +105,38 @@
             ); 
         
         
-        //v trying to figure out how to incorporate Antonio's code
-        // $persons = array('Jason','Kye','Will','Tony');
-        // shuffle($persons);
+        global $people;
         
+        $people = array();
         
-        // foreach ($persons as $persons){
-	       // echo "<img src ='profile_pics/$persons.png'><br>";
-	       // }
-	     //^  
-            
-        //edited by Jason, edited again 9/25/17
-        function displayPerson(&$person) {
-            // show profile pic
-            echo $person["name"];
-            echo "<br>";
-            echo "<img src='".$person["profilePicUrl"]."'>";
-            
+        for($i=1;$i<5;$i++) {
+            array_push($people, ${'person' .$i});
+        }
+        shuffle($people);
+        
+        function randomPeople() {
+            global $people;
+            for($i=0;$i<count($people);$i++) {
+                echo $people[$i] ["name"];
+                echo "<br>";
+                echo "<img src='".$people[$i]["profilePicUrl"]."'>";
+                echo "<br>";
                 
-            // iterate through $person's "cards"
-                
-            for($i = 0; $i < count($person["cards"]); $i++) {
-                $card = $person["cards"][$i];
+                for($j = 0; $j <= count($people[$i]["cards"]); $j++) {
+                $card = $people[$i]["cards"][$j];
                     
                 // construct the imgURL for each card
                 
                 // translate this to HTML 
                 echo "<img src='".$card["imgURL"]."'>"; 
-            }
+                }
                 
-            echo calculateHandValue($person["cards"]); 
-            $person["totalPoints"] = calculateHandValue($person["cards"]);
-            echo "<br>";
+                echo calculateHandValue($people[$i]["cards"]); 
+                $people[$i]["totalPoints"] = calculateHandValue($people[$i]["cards"]);
+                echo "<br>";
+            }
             
         }
-            
             
         function calculateHandValue($cards) {
             $sum = 0; 
@@ -153,22 +150,24 @@
         
         
         //add this Jason
-        function determineWinner($player1, $player2, $player3, $player4) {
+        function determineWinner($player) {
             //For error testing
             $winner = "NULL";
             $highestSum = 0;
             $winningTotal = 0;
-            
+
             //iterate through players
-            for($i = 1; $i <= 4; $i++) {
+            for($i = 0; $i < count($player); $i++) {
+                
                 //compare current player's score to the highest sum, while not being greater than 42.
-                if ((${'player'.$i}["totalPoints"] > $highestSum) && (${'player'.$i}["totalPoints"] < 42)) {
-                    $highestSum = ${'player'.$i}["totalPoints"];
-                    $winner = ${'player'.$i}["name"];
-                    
-                    
+                if (($player[$i]["totalPoints"] > $highestSum) && ($player[$i]["totalPoints"] <= 42)) {
+                    $highestSum = $player[$i]["totalPoints"];
+                    $winner = $player[$i]["name"];
                 }
-                $winningTotal+= ${'player'.$i}["totalPoints"];
+                
+                if($player[$i]["totalPoints"] <= 42) {
+                    $winningTotal+= $player[$i]["totalPoints"];
+                }
             }
                 
             echo "The winner is $winner with $winningTotal points!";
