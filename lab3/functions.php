@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        
-    </head>
-    <body>
-        
-        <?php 
-        
-        // Generate a deck of cards 
-        // [0, 1, 2, ..., 51]
-        // map each number to a card 
-        
-        // generate a "hand" of cards
-        
-         /*TODO:
-            done:Get his version working
-            Decide when to stop getting points for a player before passing 42
-            Display winner
-            Display same 4 players in random order
-            Create css file with at least 10 rules
-            Make code look pretty
-            */
-        
+<?php 
         
         function mapNumberToCard($num) {
             $cardValue = ($num % 13) + 1; 
@@ -126,13 +103,25 @@
             "cards" => generateHand($deck),
             "totalPoints" => 0
             ); 
-                
+        
+        
+        //v trying to figure out how to incorporate Antonio's code
+        // $persons = array('Jason','Kye','Will','Tony');
+        // shuffle($persons);
+        
+        
+        // foreach ($persons as $persons){
+	       // echo "<img src ='profile_pics/$persons.png'><br>";
+	       // }
+	     //^  
             
         //edited by Jason, edited again 9/25/17
         function displayPerson(&$person) {
             // show profile pic
-            echo "<img src='".$person["profilePicUrl"]."'>"; 
-                
+            echo $person["name"];
+            echo "<br>";
+            echo "<img src='".$person["profilePicUrl"]."'>";
+            
                 
             // iterate through $person's "cards"
                 
@@ -162,6 +151,7 @@
             return $sum; 
         }
         
+        
         //add this Jason
         function determineWinner($player1, $player2, $player3, $player4) {
             //For error testing
@@ -180,6 +170,4 @@
             echo "The winner is $winner";
         }
 
-        ?>
-    </body>
-</html>
+?>
