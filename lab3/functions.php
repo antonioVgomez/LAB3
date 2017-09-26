@@ -56,11 +56,18 @@
         // Return a specific number of cards
         function generateHand(&$deck) {
             $hand = array(); 
-            
-            for ($i = 0; $i < 3; $i++) {
+            $counter = 0;
+            for ($i = 0; $i < count($deck); $i++) {
                 $cardNum = array_pop($deck);
                 $card = mapNumberToCard($cardNum); 
                 array_push($hand, $card); 
+                
+                $counter +=$card["num"];
+                if ($counter > 42) {
+                    break;
+                } else if (($counter <= 42) && ($counter >=37)) {
+                    break;
+                }
             }
             
             shuffle($deck);
