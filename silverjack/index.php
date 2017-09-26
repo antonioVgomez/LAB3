@@ -13,108 +13,171 @@
         
         // generate a "hand" of cards
         
-        function mapNumberToCard($num) {
-            $cardValue = ($num % 13) + 1; 
-            $cardSuit = floor($num / 13); 
-            $suitStr = ""; 
+        // function mapNumberToCard($num) {
+        //     $cardValue = ($num % 13) + 1; 
+        //     $cardSuit = floor($num / 13); 
+        //     $suitStr = ""; 
             
-            switch($cardSuit) {
-                case 0: 
-                    $suitStr = "clubs"; 
-                    break; 
-                case 1: 
-                    $suitStr = "diamonds"; 
-                    break; 
-                case 2: 
-                    $suitStr = "hearts"; 
-                    break; 
-                case 3: 
-                    $suitStr = "spades"; 
-                    break; 
-            }
+        //     switch($cardSuit) {
+        //         case 0: 
+        //             $suitStr = "clubs"; 
+        //             break; 
+        //         case 1: 
+        //             $suitStr = "diamonds"; 
+        //             break; 
+        //         case 2: 
+        //             $suitStr = "hearts"; 
+        //             break; 
+        //         case 3: 
+        //             $suitStr = "spades"; 
+        //             break; 
+        //     }
 
-            $card = array(
-                'num' => $cardValue, 
-                'suit' => $cardSuit, 
-                'imgURL' => "./cards/".$suitStr."/".$cardValue.".png"
-                ); 
+        //     $card = array(
+        //         'num' => $cardValue, 
+        //         'suit' => $cardSuit, 
+        //         'imgURL' => "./cards/".$suitStr."/".$cardValue.".png"
+        //         ); 
             
-            return $card; 
-        }
+        //     return $card; 
+        // }
         
         
         function generateDeck() {
             $cards = array(); 
-        
-            for ($i = 0; $i < 52; $i++) {
-                array_push($cards, $i); 
-            }
+            $suits = array("clubs", "diamonds", "hearts", "spades"); 
             
+            foreach ($suits as $suit) {
+                for ($i = 1; $i <= 13; $i++ ) {
+                        $card = new Card(); 
+                        $card->suit = $suit; 
+                        $card->val = $i; 
+                        
+                        array_push($cards, $card); 
+                }
+            }
             
             shuffle($cards); 
-            
             return $cards; 
- 
         }
+            
         
         
-        function printDeck($deck) {
-            for ($i = 0; $i < count($deck); $i++) {
-                $cardNum = $deck[$i]; // number between 0 and 51
-                $card = mapNumberToCard($cardNum); 
-                echo "imgURL: ".$card["imgURL"]."<br>"; 
+        
+        class Card {
+            public $suit; 
+            public $val; 
+            
+            public function getImgURL() {
+                return "./cards/".$this->suit."/".$this->val.".png"; 
             }
         }
         
-        // Return a specific number of cards
-        function generateHand($deck) {
+   
+        
+        function printDeck($deck) {
+            foreach ($deck as $card) {
+                echo "imgURL: ".$card->getImgURL()."<br>"; 
+            }
+        }
+        function printHand($hand) {
+            foreach ($hand as $card) {
+                echo "imgURL: ".$card->getImgURL()."<br>"; 
+            }
+        }
+        //Return a specific number of cards
+        //Passby reference is allowing the variable to be modified, this allows for a new deck to be generated for each object.
+        function generateHand(&$deck) {
             $hand = array(); 
             
             for ($i = 0; $i < 3; $i++) {
-                $cardNum = array_pop($deck);
-                $card = mapNumberToCard($cardNum); 
+                $card = array_pop($deck);
                 array_push($hand, $card); 
             }
             
             return $hand; 
         }
         
-        $deck = generateDeck(); 
-        //printDeck($deck); 
+        
+       
         
         
+        ///////////////////////////////////////////////////////////////////
+        //  Plan: 
+        //
+        //  What is a "person"? ===> shoud have a few properties
+        //      ==> name
+        //      ==> img_url 
+        //      ==> hand (array of cards)
+        //
+        //  1) Declare 4 people.  
+        //       - each person should the above properties 
+        //              - how to give each person a "hand"
+        //                   a) generate a deck of random cards
+        //                   b) function that gives some number of cards to a person (distributeCardstoPerson?)
+        //                   c) call distributeCardstoPerson on the current person object 
+        //       - store the 4 people objects in an array
+        //  
+        //  2) Randomize the people ==> shuffle the array of people 
+        //  3) display the people.  ===> need a function that takes a person and prints html 
+        // 
+        ////////////////////////////////////////////////////////////////////
         
         // function that generates a "hand" of cards for one person (no duplicates)
         
         
+         $deck = generateDeck(); 
+        //  printDeck($deck);
+        
+       
             
-        $person = array('Jason','Kye','Will','Tony');
-        shuffle($person);
         
+        $players = array(
+            array(
+            "name" => "Jason", 
+            "profilePicUrl" => "./profile_pics/Jason.png", 
+            "cards" => generateHand($deck),
+            ),
+            array(
+            "name" => "Will",
+            "profilePicUrl" => "./profile_pics/Will.png", 
+            "cards" => generateHand($deck),
+            ),
+            array(
+            "name" => "Kye",
+            "profilePicUrl" => "./profile_pics/Kye.png", 
+            "cards" => generateHand($deck),
+            ),
+            array(
+            "name" => "Tony",
+            "profilePicUrl" => "./profile_pics/Tony.png", 
+            "cards" => generateHand($deck),
+            )
+         );
+        shuffle($players);
         
-        foreach ($person as $person){
-	        echo "<img src ='profile_pics/$person.png'><br>";
-	        }
+        foreach($players as $player){
+            displayPerson($player);
+        }
+            
             
             function displayPerson($person) {
                 // show profile pic
+                echo "<img src='".$person["profilePicUrl"]."'>"; 
                 
-                // for($i = 0; $i < 4; $i++){
-                //     echo "<img src='$person[$i].'>"; 
-                // }
                 
                 // iterate through $person's "cards"
                 
-                // for($i = 0; $i < count($person["cards"]); $i++) {
-                //     $card = $person["cards"][$i];
+                for($i = 0; $i < count($person["cards"]); $i++) {
+                    $card = $person["cards"][$i];
                     
-                //     // construct the imgURL for each card
+                    // construct the imgURL for each card
                     
-                //     // translate this to HTML 
-                //     echo "<img src='".$card["imgURL"]."'>"; 
-                // }
+                    // translate this to HTML 
+                    echo "<img src='".$card->getImgURL()."'>"; 
+                }
                 
-                // echo calculateHandValue($person["cards"]); 
+                echo calculateHandValue($person["cards"]); 
             }
             
             
@@ -122,13 +185,13 @@
                 $sum = 0; 
                 
                 foreach ($cards as $card) {
-                    $sum += $card["num"]; 
+                    $sum += $card->val; 
                 }
                 
                 return $sum; 
             }
             
-            displayPerson($person); 
+            displayPerson($players); 
             
             
         
